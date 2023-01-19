@@ -2,9 +2,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
-const homeRoute = require('./src/routes/home-route');
-const customersRoutes = require('./src/routes/customers-route');
-const transactionsRoutes = require('./src/routes/transactions-route');
+const homeRoute = require('./routes/home-route');
+const customersRoutes = require('./routes/customers-route');
+const transactionsRoutes = require('./routes/transactions-route');
 
 const app = express();
 
