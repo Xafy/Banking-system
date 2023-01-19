@@ -1,0 +1,20 @@
+{
+  "name": "banking-system",
+  "version": "1.0.0",
+  "description": "A simple bank system to transfer money between customers",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Mohamed Abdelshafy",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "mongodb": "^4.13.0",
+    "mongoose": "^6.8.2",
+    "nodemon": "^2.0.20"
+  }
+}

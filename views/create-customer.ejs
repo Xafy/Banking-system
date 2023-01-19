@@ -1,0 +1,22 @@
+<%- include('layout/header') %> 
+<div class="container px-2 mx-2">
+    <form method="post" action="/customers">
+    <div class="mb-3">
+      <label class="form-label">Name</label>
+      <input type="text" class="form-control" name ="name" >
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <input type="text" class="form-control"  name ="email">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Balance</label>
+      <input type="number" class="form-control" name ="balance">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+
+
+<%- include('layout/footer') %> 

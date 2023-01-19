@@ -1,0 +1,30 @@
+<%- include('layout/header') %> 
+
+<div class="container px-2 mx-2">
+    <form method="post" action="/transactions/">
+    <div class="mb-3">
+      <label class="form-label">From</label>
+      <input type="text" class="form-control" name ="from" value = "<%= user.name %>" disabled>
+      <input type="text" class="form-control" name ="from" value = "<%= user.name %>" hidden>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">To</label>
+      <select class="form-select" name="to" aria-label="Default select example">
+        <option selected>Open this select menu</option>
+        <% users.forEach(element => { %>
+            <% if (element.name !== user.name) { %>
+            <option value="<%= element.name %>" ><%= element.name %> </option> 
+            <% } %>
+        <% }) %>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Amount</label>
+      <input type="number" class="form-control" name ="amount">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+
+
+<%- include('layout/footer') %> 

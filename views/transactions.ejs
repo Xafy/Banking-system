@@ -1,0 +1,34 @@
+<%- include('layout/header') %> 
+
+
+<div class="container">
+  <% if (transactions) { %>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">from</th>
+            <th scope="col">to</th>
+            <th scope="col">amount</th>
+            <th scope="col">date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% transactions.forEach((transaction, index) => { %>
+          <tr>
+              <th scope="row"><%= index+1 %> </th>
+              <td><%= transaction.from %> </td>
+              <td><%= transaction.to %> </td>
+              <td><%= transaction.amount %>$ </td>
+              <td><%= transaction.date %> </td>
+            </tr>
+          <% }) %>
+          
+      </table> 
+      <% } else { %>
+       <div>NO USERS</div>  
+  <% } %>
+
+</div>
+
+<%- include('layout/footer') %> 

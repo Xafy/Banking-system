@@ -1,0 +1,37 @@
+<%- include('layout/header') %> 
+
+
+<div class="container">
+  <% if (customers) { %>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Balance</th>
+            <th scope="col">Transact</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% customers.forEach((customer, index) => { %>
+          <tr>
+              <th scope="row"><%= index %> </th>
+              <td><%= customer.name %> </td>
+              <td><%= customer.email %> </td>
+              <td><%= customer.balance %>$ </td>
+              <td>
+                <a class="btn btn-primary" href="\customers\<%= customer._id %> " role="button">Transfer money</a>
+                <a class="btn btn-primary btn-danger" href="customers\<%= customer._id %> " role="button">Delete</a>
+              </td>
+            </tr>
+          <% }) %>
+          
+      </table> 
+      <% } else { %>
+       <div>NO USERS</div>  
+  <% } %>
+
+</div>
+
+<%- include('layout/footer') %> 
