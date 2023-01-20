@@ -22,7 +22,7 @@ const getCustomers = async (req, res, next)=>{
                 customers : customers
         })
     } catch (err){
-        res.json({message : `Error fetching customers , ERROR => /n /t ${err}`})
+        res.json({message : `Error fetching customers , ERROR => /n  ${err}`})
     }
     // res.json({customers});
 }
