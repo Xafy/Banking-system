@@ -12,14 +12,13 @@ const createCustomer = async (req, res, next)=>{
     const result = await createdCustomer.save();
 
     res.render("create-customer", {title:"Create Customer"});
-
 }
 
 const getCustomers = async (req, res, next)=>{
     try {
         const customers = await Customer.find().exec();
-        res.render('index', {
-                title : 'Home',
+        res.render('customers', {
+                title : 'Customers',
                 customers : customers
         })
     } catch (err){

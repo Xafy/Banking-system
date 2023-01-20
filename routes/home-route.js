@@ -5,6 +5,8 @@ const router = express.Router();
 const customerController = require('../controllers/customers-conroller');
 const transactionsController = require('../controllers/transactions-controller');
 
-router.get('/', customerController.getCustomers )
+router.get('/', (req, res)=>{
+    res.render('index', {title : 'Home'})
+} )
 
 module.exports = router;
